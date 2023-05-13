@@ -1,6 +1,7 @@
 /** @format */
 
 const express = require("express");
+const path = require("path");
 const dotenv = require("dotenv");
 const exphbs = require("express-handlebars");
 const connectDB = require("./config/db");
@@ -18,6 +19,8 @@ if (process.env.NODE_ENV === "development") {
 
 app.engine(".hbs", exphbs.engine({ defaultLayout: "main", extname: ".hbs" }));
 app.set("view engine", ".hbs");
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", require("./routes/index"));
 app.use("/dashboard", require("./routes/index"));
