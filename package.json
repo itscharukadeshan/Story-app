@@ -4,8 +4,8 @@
   "description": "app to crete publick private strories ",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node index.js ",
-    "dev": "cross-env NODE_ENV=development nodemon index.js "
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js"
   },
   "author": "charuka deshan",
   "license": "MIT",
