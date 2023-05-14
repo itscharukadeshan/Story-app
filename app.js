@@ -8,10 +8,10 @@ const connectDB = require("./config/db");
 const morgan = require("morgan");
 const { route } = require("./routes");
 const sessions = require("express-session");
-const passport = require("./config/passport");
+const passport = require("passport");
 
 dotenv.config({ path: "./config/.env" });
-require("./config/passport"), { passport };
+require("./config/passport", { passport });
 connectDB();
 
 const app = express();
@@ -27,17 +27,17 @@ app.use(
     secret: "keyboard cats",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true },
+    cookie: { secure: false },
   })
 );
 
 app.use(passport.initialize());
-app.use(passport.sessions());
+app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", require("./routes/index"));
-app.use("/dashboard", require("./routes/index"));
+app.use("/auth", require("./routes/auth"));
 
 const PORT = process.env.PORT || 3001;
 
