@@ -13,7 +13,26 @@ module.exports = function (passport) {
         callbackURL: "/auth/google/callback",
       },
       async (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
+        const newUser = {
+          googleId: profile.id,
+          displayName: profile.displayName,
+          firstName: profile.givenName,
+          lastName: profile.familyName,
+          profile: profile.photos[0].value,
+        };
+
+        try {
+          let user = await User.findOne({ googleId: profile.id });
+
+          if (user) {
+            done(null, user);
+          } else {
+            user = await User.create(newUser);
+            done(null, user);
+          }
+        } catch (err) {
+          console.log(err);
+        }
       }
     )
   );
@@ -22,8 +41,13 @@ module.exports = function (passport) {
   });
 
   passport.deserializeUser(function (id, done) {
-    User.findById(id, function (err, user) {
-      done(err, user);
-    });
+    User.findById(id)
+      .exec()
+      .then((user) => {
+        done(null, user);
+      })
+      .catch((err) => {
+        done(err, null);
+      });
   });
 };
