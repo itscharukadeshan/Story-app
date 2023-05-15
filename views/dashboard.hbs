@@ -3,6 +3,30 @@
 <h3>Welcome {{name}}</h3>
 <p>Here are your stories</p>
 
-{{#if stories}}{{else}}
+{{#if stories}}
+
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Dates</th>
+        <th>Stories</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each stories}}
+        <tr>
+          <td><a href="stories/{{id}}"></a></td>
+          <td>{{title}}</td>
+          <td>{{createdAt}}</td>
+          <span class="dash-status">{{status}}</span>
+          <td></td>
+        </tr>
+
+      {{/each}}
+    </tbody>
+  </table>
+
+{{else}}
   <p>you don't have any stories</p>
 {{/if}}
