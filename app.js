@@ -9,6 +9,7 @@ const morgan = require("morgan");
 const { route } = require("./routes");
 const sessions = require("express-session");
 const passport = require("passport");
+const mongoStore = require("connect-mongo");
 
 dotenv.config({ path: "./config/.env" });
 require("./config/passport")(passport);
@@ -27,7 +28,9 @@ app.use(
     secret: "keyboard cats",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false },
+    store: mongoStore.create({
+      mongoUrl: process.env.MONGO_URI,
+    }),
   })
 );
 
