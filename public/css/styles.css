@@ -8,8 +8,3 @@ body {
   margin-top: 50px;
   text-align: center;
 }
-
-.nav-wrapper a:hover {
-  background-color: #008cffd5;
-  color: #160f0f;
-}
