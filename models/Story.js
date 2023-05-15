@@ -5,23 +5,24 @@ const mongoose = require("mongoose");
 const StorySchema = new mongoose.Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
+    trim: true,
   },
   body: {
     type: String,
-    require: true,
+    required: true,
   },
   status: {
     type: String,
-    default: ["public"],
-    enum: ["public, privet"],
+    default: "public",
+    enum: ["public", "private"],
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    require: true,
-  },
 
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
