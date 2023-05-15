@@ -14,8 +14,7 @@ router.get(
   }
 );
 router.get("/logout", (req, res, next) => {
-  res.logout;
-  (function (err) {
+  req.logout(function (err) {
     if (err) {
       return next(err);
     }
