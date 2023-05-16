@@ -30,13 +30,15 @@
 
     <script>M.Sidenav.init (document.querySelector('.sidenav'))</script>
      <script>M.FormSelect.init (document.querySelector('#status'))</script>
+     
 <script>
-  
-        CKEDITOR.replace("body", {
-  plugins: 'wysiwygarea,toolbar,basicstyles,link'
-});
-
+  if (document.getElementById('body')) {
+    CKEDITOR.replace('body', {
+      plugins: 'wysiwygarea,toolbar,basicstyles,link'
+    });
+  }
 </script>
+
 
 
   </body>
