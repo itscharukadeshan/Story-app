@@ -3,6 +3,7 @@
 const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv");
+const methodOverride = require("method-override");
 const exphbs = require("express-handlebars");
 const connectDB = require("./config/db");
 const morgan = require("morgan");
@@ -19,6 +20,16 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+app.use(
+  methodOverride(function (req, res) {
+    if (req.body && typeof req.body === "object" && "_method" in req.body) {
+      let method = req.body._method;
+      delete req.body._method;
+      return method;
+    }
+  })
+);
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
