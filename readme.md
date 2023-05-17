@@ -48,7 +48,7 @@
  <li>JavaScript</li>
   <li>MongoDB</li>
    <li>Express.js</li>
-    <li>Passport.js<li>
-  <li>CSS</li>
+    <li>Passport.js</li>
+<li>CSS</li>
   <li>Materialize CSS</li>
 </ul>
