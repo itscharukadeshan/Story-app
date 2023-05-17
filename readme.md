@@ -11,8 +11,8 @@
     </a>
   </li>
   <li>
-    <a href="https://www.twitch.tv/yourtwitchchannel">
-      CRUD story app Code Along in Twitch
+    <a href="https://www.twitch.tv/ Mayanwolfe">
+       Mayanwolfe Code Along in Twitch
     </a>
     - 
     <a href="https://www.youtube.com/watch?v=TmlyYKEzE_Q&t=10s">
