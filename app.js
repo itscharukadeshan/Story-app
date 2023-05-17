@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-const { formatDate } = require("./helpers/hbs");
+const { formatDate, truncate, stripTags, editIcon } = require("./helpers/hbs");
 
 app.engine(
   ".hbs",
@@ -33,6 +33,9 @@ app.engine(
     extname: ".hbs",
     helpers: {
       formatDate,
+      truncate,
+      stripTags,
+      editIcon,
     },
   })
 );
@@ -51,6 +54,11 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(function (req, res, next) {
+  res.locals.user = req.user || null;
+  next();
+});
 
 app.use(express.static(path.join(__dirname, "public")));
 
