@@ -49,6 +49,24 @@
   <li>MongoDB</li>
    <li>Express.js</li>
     <li>Passport.js</li>
-<li>CSS</li>
-  <li>Materialize CSS</li>
+    <li>Materialize CSS</li>
+    <li>CSS</li>
+  
+</ul>
+
+<p>The project relies on the following dependencies:</p>
+
+<ul>
+  <li>connect-mongo</li>
+  <li>dotenv</li>
+  <li>express</li>
+  <li>express-handlebars</li>
+  <li>express-session</li>
+  <li>fs-extra</li>
+  <li>method-override</li>
+  <li>moment</li>
+  <li>mongoose</li>
+  <li>morgan</li>
+  <li>passport</li>
+  <li>passport-google-oauth20</li>
 </ul>
