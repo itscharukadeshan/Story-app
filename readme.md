@@ -44,10 +44,11 @@
 <p>The skills related to this project are:</p>
 
 <ul>
+ <li>Handlebars</li>
+ <li>JavaScript</li>
   <li>MongoDB</li>
-  <li>JavaScript</li>
+   <li>Express.js</li>
+    <li>Passport.js<li>
   <li>CSS</li>
-  <li>Express.js</li>
-  <li>Handlebars</li>
   <li>Materialize CSS</li>
 </ul>
