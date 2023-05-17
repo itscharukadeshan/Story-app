@@ -24,7 +24,18 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.engine(".hbs", exphbs.engine({ defaultLayout: "main", extname: ".hbs" }));
+const { formatDate } = require("./helpers/hbs");
+
+app.engine(
+  ".hbs",
+  exphbs.engine({
+    defaultLayout: "main",
+    extname: ".hbs",
+    helpers: {
+      formatDate,
+    },
+  })
+);
 app.set("view engine", ".hbs");
 
 app.use(
