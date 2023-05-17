@@ -22,9 +22,12 @@
 <h3>What challenges did I face and how did I overcome them?</h3>
 
 <ul>
-  <li>Tutorials were outdated even after a year.</li>
+  <li>Tutorials were outdated even after a one year.</li>
   <li>Understanding the Handlebars approach to displaying JavaScript data.</li>
-  <li>Creating and using data in a MongoDB database.</li>
+  <li>Creating and using data in a MongoDB databases.</li>
+  <li> Using paths in Handlebars </li>
+  <li>Using async await and try catch blocks</li>
+  <li>How to debug and update older code bases</li>
 </ul>
 
 <h2>Features</h2>
