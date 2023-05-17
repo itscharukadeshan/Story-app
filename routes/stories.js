@@ -55,4 +55,18 @@ router.get("/edit/:id", ensureAuth, async (req, res) => {
     return res.render("error/500");
   }
 });
+
+router.put("/:id", ensureAuth, async (req, res) => {
+  let story = await Story.findById(req.params.id).lean();
+  if (!story) {
+    res.render("/stories");
+  } else {
+    story = await Story.findOneAndUpdate({ _id: req.params.id }, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    res.redirect("/dashboard");
+  }
+});
 module.exports = router;
