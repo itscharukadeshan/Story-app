@@ -30,10 +30,10 @@
 <h2>Features</h2>
 
 <ul>
-  <li>Light/dark mode toggle</li>
-  <li>Live previews</li>
-  <li>Fullscreen mode</li>
-  <li>Cross platform</li>
+  <li>CURD operations in stories</li>
+  <li> Google Authentication using passport js</li>
+  <li>Create public and private stories </li>
+
 </ul>
 
 <h1>Skills</h1>
@@ -41,14 +41,3 @@
 <p>
   The skills related to this project are:
 </p>
-
-<p>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" width="40" height="40" alt="MongoDB Icon"> MongoDB
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" width="40" height="40" alt="Express.js Icon"> Express.js
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript Icon"> JavaScript
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/handlebars/handlebars-original-wordmark.svg" width="40" height="40" alt="Handlebars Icon"> Handlebars
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materializecss/materializecss-original-wordmark.svg" width="40" height="40" alt="Materialize CSS Icon"> Materialize CSS
-</p>
-
-<p>
-  The project relies on the following dependencies:
