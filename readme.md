@@ -5,8 +5,24 @@
 <h2>Acknowledgements</h2>
 
 <ul>
-  <li><a href="https://awesomeopensource.com/project/elangosundar/awesome-README-templates">Traversy Media - CRUD story app</a></li>
-  <li><a href="https://www.youtube.com/@MayanwolfeStreams">Mayanwolfe - CRUD story app</a> - <a href="https://www.youtube.com/watch?v=TmlyYKEzE_Q&t=10s">Part 1</a> - <a href="https://www.youtube.com/watch?v=M2h-zlGGYvc&t=10s">Part 2</a></li>
+  <li>
+    <a href="https://awesomeopensource.com/project/elangosundar/awesome-README-templates">
+      Traversy Media - CRUD story app
+    </a>
+  </li>
+  <li>
+    <a href="https://www.twitch.tv/yourtwitchchannel">
+      CRUD story app Code Along in Twitch
+    </a>
+    - 
+    <a href="https://www.youtube.com/watch?v=TmlyYKEzE_Q&t=10s">
+      Part 1
+    </a>
+    - 
+    <a href="https://www.youtube.com/watch?v=M2h-zlGGYvc&t=10s">
+      Part 2
+    </a>
+  </li>
 </ul>
 
 <h2>Lessons Learned</h2>
