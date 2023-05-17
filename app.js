@@ -24,7 +24,13 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-const { formatDate, truncate, stripTags, editIcon } = require("./helpers/hbs");
+const {
+  formatDate,
+  truncate,
+  stripTags,
+  editIcon,
+  select,
+} = require("./helpers/hbs");
 
 app.engine(
   ".hbs",
@@ -36,6 +42,7 @@ app.engine(
       truncate,
       stripTags,
       editIcon,
+      select,
     },
   })
 );
