@@ -14,9 +14,9 @@
 <h3>What did I learn while building this project?</h3>
 
 <ul>
-  <li>Use Handlebars for displaying dynamic HTML.</li>
-  <li>Use MongoDB, Express, and Mongoose.</li>
-  <li>Use Passport.js for user authentication.</li>
+  <li>How to use Handlebars for displaying dynamic HTML.</li>
+  <li>Use MongoDB, Express, and Mongoose for handle data</li>
+  <li>Use Passport.js for user authentication using google oauth</li>
 </ul>
 
 <h3>What challenges did I face and how did I overcome them?</h3>
