@@ -33,6 +33,20 @@ router.get("/", ensureAuth, async (req, res) => {
     res.render("errors/500");
   }
 });
+
+router.get("/:id", ensureAuth, async (req, res) => {
+  try {
+    let story = await Story.findById(req.params.id).populate("user").lean();
+
+    if (!story) {
+      return res.redirect("errors/404");
+    }
+    res.render("stories/show", { story });
+  } catch (err) {
+    console.error(err);
+    res.render("errors/404");
+  }
+});
 router.get("/edit/:id", ensureAuth, async (req, res) => {
   try {
     const story = await Story.findOne({
@@ -84,4 +98,21 @@ router.delete("/:id", ensureAuth, async (req, res) => {
     return res.render("error/500");
   }
 });
+
+router.get("/user/:userId", ensureAuth, async (req, res) => {
+  try {
+    const stories = await Story.find({
+      user: user.req.parm.userId,
+      status: "public",
+    })
+      .populate("user")
+      .lean();
+
+    res.render("stories/index", { stories });
+  } catch (err) {
+    console.error(err);
+    res.render("errors/500");
+  }
+});
+
 module.exports = router;
