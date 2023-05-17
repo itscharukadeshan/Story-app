@@ -38,6 +38,13 @@
 
 <h1>Skills</h1>
 
-<p>
-  The skills related to this project are:
-</p>
+<p>The skills related to this project are:</p>
+
+<ul>
+  <li>MongoDB</li>
+  <li>JavaScript</li>
+  <li>CSS</li>
+  <li>Express.js</li>
+  <li>Handlebars</li>
+  <li>Materialize CSS</li>
+</ul>
