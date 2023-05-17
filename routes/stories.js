@@ -102,13 +102,15 @@ router.delete("/:id", ensureAuth, async (req, res) => {
 router.get("/user/:userId", ensureAuth, async (req, res) => {
   try {
     const stories = await Story.find({
-      user: user.req.parm.userId,
+      user: req.params.userId,
       status: "public",
     })
       .populate("user")
       .lean();
 
-    res.render("stories/index", { stories });
+    res.render("stories/index", {
+      stories,
+    });
   } catch (err) {
     console.error(err);
     res.render("errors/500");
